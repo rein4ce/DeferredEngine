@@ -1,0 +1,44 @@
+#include "platform.h"
+#include "Cursor.h"
+#include "VoidGame.h"
+#include "Framework.h"
+#include "Input.h"
+
+CCursor gCursor;
+
+//////////////////////////////////////////////////////////////////////////
+CCursor::CCursor(void)
+{
+	current = CURSOR_SELECT;
+}
+
+CCursor::~CCursor(void)
+{
+}
+
+//////////////////////////////////////////////////////////////////////////
+void CCursor::Init( bool v )
+{
+	visible = v;
+}
+
+//////////////////////////////////////////////////////////////////////////
+void CCursor::Release()
+{
+
+}
+
+//////////////////////////////////////////////////////////////////////////
+void CCursor::Render()
+{
+	if (!visible)
+		return;
+
+	int mx, my;
+	gInput.GetMousePos( mx, my );
+
+	D3DXVECTOR3 pos;
+	pos.x = mx;
+	pos.y = my;
+	pos.z = 0;
+}
