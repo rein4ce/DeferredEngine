@@ -1,4 +1,4 @@
-# DeferredEngine
+# Deferred Rendering Engine
 
 A hobby game engine written in C++ and Direct3D 10 for the purpose of exploring modern rendering and game development techniques.
 
